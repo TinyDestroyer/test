@@ -7,11 +7,13 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const click = async () => {
     setLoading(true);
+    console.log("point 1");
     const msg = await fetch(`/api/chat?query=${query}`, {
       method: "GET"
     })
     const result = await msg.json();
     setMsg(result);
+    console.log("point 2");
     setLoading(false);
   }
   return (
