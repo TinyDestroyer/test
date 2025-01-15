@@ -13,7 +13,7 @@ export async function GET(req: Request){
         messages: [
           {
             role: "user",
-            content: "India",
+            content: `${query}`,
           },
         ],
         model: "llama-3.3-70b-versatile",
